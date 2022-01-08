@@ -1,0 +1,58 @@
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._                     |
+ _________|_____________________:=._o "=._."_.-="'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".   |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-._   ". '__|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+____/______/______/___|o;._    "      `".o|o_.--"    ;o;____/______/______/____
+/______/______/______/_"=._o--._        ; | ;        ; ;/______/______/______/_
+____/______/______/______/__"=._o--._   ;o|o;     _._;o;____/______/______/____
+/______/______/______/______/____"=._o._; | ;_.--"o.--"_/______/______/______/_
+____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
+/______/______/______/______/______/______/______/______/______/______/_____ /
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+
+fstep = input("Type where to proceed? Left or Right ? Type 'right' or 'left'.\n").lower()
+#lower case's the input for comparison
+if(fstep == "right"):
+  print("You fell into a hole. Game Over!")
+  
+if(fstep == "left"):
+  print("You arrive at the island safely\n")
+  sstep = input("Choose to wait for a boat, or swim across. Wait or Swim. Type 'Wait' or 'Swim'  ?\n").lower()
+#lower case's the input for comparison
+
+  if(sstep == "swim"):
+    print("You get attacked by an angry trout. Game Over !!\n")
+  elif(sstep == "wait"):
+    print("You arrive at the island unharmed.\n")
+    print("There is a house with three doors. Red, Yellow and Blue.")
+    tstep = input("Which door do you choose? Red, Yellow or Blue? Type 'Red', 'Yellow' or 'Blue'.\n").lower()
+    #lower case's the input for comparison
+    if(tstep == "red"):
+      print("The room is full of fire. Game Over !\n")
+    if(tstep == "yellow"):
+      print("You enter a room full of Beasts. Game Over !\n")
+    if(tstep == "blue"):
+      print("You found the treasure. You win!\n")
+    if(tstep != "red" and tstep != "blue" and tstep != "yellow"):
+      print("The door you selected does not exist, Game Over!\n")
+  if(sstep != "wait" and sstep != "swim"):
+    print("Invalid Selection. Game Over !\n")
+if(fstep != "left" and fstep != "right"):
+  print("Invalid Selection. Game Over!\n")
